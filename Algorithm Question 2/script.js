@@ -1,23 +1,16 @@
-// ! Write a function that takes an array of numbers
-// ! as input and returns the maximum number in the array.
+// ! Write a function that takes a string as input and
+//! returns the string reversed.
 
-const numbers = [3, 8, 1, 6, 2, 8, 4, 32, 30];
+const originalString = "Hello, React Developer!";
+const reversedString = reverseString(originalString);
+console.log(reversedString);
+// Output: "!repoleveD tcareR ,olleH"
 
-function findMax(arr) {
-    if (arr.length == 0) {
-        return undefined;
-    }
 
-    let max = arr[0];
+function reverseString(string) {
+    const characters = string.split('');
+    const reversedCharacters = characters.reverse();
+    const reversedString = reversedCharacters.join()
 
-    for (let i = 1; i < arr.length; i++) {
-        if (arr[i] > max) {
-            max = arr[i]
-        }
-    }
-    return max;
+    return reversedString;
 }
-
-
-const maxNumber = findMax(numbers);
-console.log(maxNumber); // Output: 32
